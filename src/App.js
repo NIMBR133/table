@@ -24,7 +24,7 @@ class App extends React.Component {
 	}
 
 	async loadingData(amount) { // Получение данных с сервера
-		const response = await fetch(`http://www.filltext.com/?rows=${amount}&firstName={firstName}&lastName={lastName}&id={number|1000}&email={email}&phone={phone|format}&city={city}&address={addressObject}`)
+		const response = await fetch(`https://www.filltext.com/?rows=${amount}&firstName={firstName}&lastName={lastName}&id={number|1000}&email={email}&phone={phone|format}&city={city}&address={addressObject}`)
 		const dataUsers = await response.json();
 		this.setState({
 			data: dataUsers,
